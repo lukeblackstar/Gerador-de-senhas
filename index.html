@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas Aleatórias</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerador de Senhas</h1>
+        
+        <div class="password-display">
+            <span id="password">Clique em gerar</span>
+            <button id="copy-btn" class="copy-btn">📋</button>
+        </div>
+        
+        <div class="settings">
+            <div class="setting">
+                <label for="length">Tamanho da senha:</label>
+                <div class="length-container">
+                    <input type="range" id="length" min="4" max="30" value="12">
+                    <span id="length-value">12</span>
+                </div>
+            </div>
+            
+            <div class="setting">
+                <label for="uppercase">Incluir letras maiúsculas</label>
+                <input type="checkbox" id="uppercase" checked>
+            </div>
+            
+            <div class="setting">
+                <label for="lowercase">Incluir letras minúsculas</label>
+                <input type="checkbox" id="lowercase" checked>
+            </div>
+            
+            <div class="setting">
+                <label for="numbers">Incluir números</label>
+                <input type="checkbox" id="numbers" checked>
+            </div>
+            
+            <div class="setting">
+                <label for="symbols">Incluir símbolos</label>
+                <input type="checkbox" id="symbols" checked>
+            </div>
+        </div>
+        
+        <button id="generate-btn" class="generate-btn">Gerar Senha</button>
+        
+        <div class="strength-meter">
+            <div id="strength-bar"></div>
+        </div>
+        <p class="strength-text" id="strength-text">Força da senha</p>
+    </div>
+    
+    <div class="toast" id="toast">Senha copiada!</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
